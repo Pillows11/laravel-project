@@ -11,6 +11,8 @@ class Grade extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['nama', 'grade_id', 'departement_id'];
+
     public function students() : HasMany{
         return $this->hasMany(Student::class);
     }

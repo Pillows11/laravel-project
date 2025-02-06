@@ -10,8 +10,12 @@ class Departement extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['nama','descrip', 'grade_id', 'departement_id'];
+
+
     public function students(): HasMany
     {
         return $this->hasMany(Student::class,'department_id');
     }
+    
 }

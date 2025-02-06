@@ -1,22 +1,17 @@
 <?php
 
-namespace App\Http\Controllers;
-
-use App\Models\Grade;
+namespace App\Http\Controllers\admin;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class GradeAdminController extends Controller
+class DashboardController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $grades = Grade::all();
-        return view('grade-admin', [
-            'title' => 'Grade',
-            'grades' => $grades->load('students')
-        ]);
+        return view('dashboard', ['title' => 'Dashboard']);
     }
 
     /**

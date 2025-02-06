@@ -17,6 +17,7 @@ return new class extends Migration
             $table->integer('grade_id');
             $table->string('email')->unique();
             $table->string('alamat');
+            $table->string('telepon');
             $table->timestamps();
         });
     }
